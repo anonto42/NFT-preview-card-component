@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <style>
+    :root{
+      --SoftBlue: hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+      --CyanEye: hsla(178, 100%, 50%, 0.494);
+      --mainVeryDarkblue : hsl(217, 54%, 11%);
+      --CardVeryDarkblue : hsl(216, 50%, 16%);
+      --lineVeryDarkblue : hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%)
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--mainVeryDarkblue);
+    }
+    p{
+      font-size: 18px;
+      color: var(--SoftBlue);
+    }
+    .container{
+      width: 375px;
+      background-color: var(--CardVeryDarkblue);
+      padding: 20px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .container .card .img img{
+      width: 100%;
+      border-radius: 10px;
+    }
+    .container .card .img .img2{
+      position: absolute;
+      width: 60px;
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin-top: 65px;
+    }
+    .container .card .text{
+      color: var(--White);
+      margin: 10px 0;
+    }
+    .container .card .text h1{
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .container .card .text p{
+      font-size: 18px;
+      margin: 10px 0;
+      font-weight: 400;
+    }
+    .container .card .price{
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+    .container .card .price span{
+      display: flex;
+      margin-bottom: 10px;
+      color: var(--SoftBlue);
+    }
+    .container .card .price span img {
+      margin: 0 10px;
+    }
+    #span{
+      color: var(--Cyan);
+    }
+    hr{
+      margin-bottom: 20px;
+      border: 1px solid var(--lineVeryDarkblue);
+    }
+    .container .card .user {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .container .card .user h3{
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 20px;
+      color: var(--SoftBlue);
+      cursor: pointer;
+    }
+    .container .card .user h3 span {
+      color: var(--White);
+    }
+    .container .card .user img{
+      width: 40px;
+      border: 1.5px solid;
+      border-radius: 90px;
+    }
+    #chang{
+      cursor: pointer;
+    }
+    #chang:hover{
+      color: var(--Cyan);
+    }
+    .container .card .img #back{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: var(--CyanEye);
+      transform: translate(-50%,-50%);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--CyanEye);
+      width: 89%;
+      height: 335px;
+      margin-top: -127px;
+      border-radius: 10px;
+    }
+    .container .card .img #back:hover{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img id="hover" src="images/image-equilibrium.jpg">
+        <div id="back"><img class="img2" src="images/icon-view.svg"></div>
+      </div>
+      <div class="text">
+        <h1 id="chang">Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes <br> balance and calm.</p>
+        <div class="price">
+          <span id="span"> <img src="images/icon-ethereum.svg"> 0.041 ETH</span>
+          <span><img src="images/icon-clock.svg">3 days left</span>
+        </div>
+        <hr>
+        <div class="user">
+          <img src="images/image-avatar.png">
+          <h3>Creation of <span id="chang">Jules Wyvern</span></h3>
+        </div>
+      </div>
+  </div>
+  </div>
+<!-- 
+  <script>
+    const eye = document.querySelector('.img2').style.display = 'none';
+    const eyeBackground = document.querySelector('#back').style.display = 'none';
+    const hover =document.getElementById('hover').addEventListener('click',()=>{
+      eye.style.display = 'block';
+      eyeBackground.style.display = 'flex';
+    })
+  </script> -->
+</body>
+</html>
